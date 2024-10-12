@@ -17,6 +17,13 @@ public:
 
 private:
     Ui::Calculator *ui;
+
+private slots:
+    void digits();
+    void on_pushButton_dot_clicked();
+    void operations();
+    void math_operations();
+    void on_pushButton_calc_clicked();
 };
 
 #endif // CALCULATOR_H
