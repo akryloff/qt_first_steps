@@ -23,12 +23,15 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(calc_with_login
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
-        loginwindow.h loginwindow.cpp loginwindow.ui
-        calculator.h calculator.cpp calculator.ui
+
+
         user_data.h
         user_data.cpp
         Data/users.csv
         resourses.qrc
+        calc.h calc.cpp
+
+
 
     )
 # Define target properties for Android with Qt 6 as:

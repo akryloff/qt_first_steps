@@ -8,8 +8,7 @@
 #include <filesystem>
 #include "user_data.h"
 #include <QDebug>
-#include "loginwindow.h"
-#include "calculator.h"
+#include "calc.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -28,12 +27,13 @@ public:
 private slots:
 
     void on_login_button_clicked();
-
     void on_register_button_clicked();
+signals:
+
+    void open_calc();
 
 private:
     Ui::MainWindow *ui;
-    LoginWindow *window;
-    Calculator *calc_window;
+    Calc *calc_window;
 };
 #endif // MAINWINDOW_H

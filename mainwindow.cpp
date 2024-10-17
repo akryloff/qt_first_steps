@@ -9,14 +9,13 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 }
-
-MainWindow::~MainWindow()
+    MainWindow::~MainWindow()
 {
     writeuserdata(filePath,login_data);
     delete ui;
 }
 
-void showCustomMessageBox(QString Title, QString Text) {
+void showMessageBox(QString Title, QString Text) {
     QMessageBox msgBox;
     msgBox.setWindowTitle(Title);
     msgBox.setText(Text);
@@ -36,11 +35,11 @@ void MainWindow::on_login_button_clicked()
     QString pass = ui->pass_line->text();
 
     if (login_data.contains({login,pass})) {
-        showCustomMessageBox("success", "успешно");
-        calc_window = new Calculator(this);
-        calc_window->show();
+        showMessageBox("success", "успешно");
+        emit open_calc();
+        hide();
     } else {
-        showCustomMessageBox("error", "неправильный логин или пароль. зарегистрируйтесь, если еще не сделали этого");
+        showMessageBox("error", "неправильный логин или пароль. зарегистрируйтесь, если еще не сделали этого");
     }
 }
 
@@ -50,9 +49,9 @@ void MainWindow::on_register_button_clicked()
     QString login = ui->login_line->text();
     QString pass = ui->pass_line->text();
     if (login_data.contains({login,pass})) {
-        showCustomMessageBox("already registered", "Вы уже зарегистрированы!");
+        showMessageBox("already registered", "Вы уже зарегистрированы!");
     } else {
-        showCustomMessageBox("register", "Вы успешно зарегистрированы!");
+        showMessageBox("register", "Вы успешно зарегистрированы!");
         login_data.append({login,pass});
         writeuserdata(filePath,login_data);
     }
