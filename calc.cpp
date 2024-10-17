@@ -22,9 +22,7 @@ Calc::Calc(QWidget *parent)
     resize(250, 400);
 }
 
-Calc::~Calc() {
-
-}
+Calc::~Calc() {}
 
 void Calc::createButtons() {
     QStringList buttonLabels = {"1", "2", "3", "4", "5",
