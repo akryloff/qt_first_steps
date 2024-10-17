@@ -11,6 +11,4 @@ int main(int argc, char *argv[]){
     QObject::connect(&w, &MainWindow::open_calc, &c, [&c](){c.show();});
     w.show();
     return a.exec();
-
-
 }

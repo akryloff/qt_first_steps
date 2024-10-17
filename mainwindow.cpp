@@ -31,9 +31,6 @@ MainWindow::MainWindow(QWidget *parent)
     setCentralWidget(centr);
     resize(400, 300);
 
-
-
-
 }
 MainWindow::~MainWindow() {
     writeuserdata(filePath,login_data);}

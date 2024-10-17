@@ -1,10 +1,4 @@
 #include "user_data.h"
-#include <iostream>
-#include <QFile>
-#include <QTextStream>
-#include <QDebug>
-
-
 
 QString filePath = "users.csv";
 QList<QList<QString>> login_data = readuserdata(filePath);

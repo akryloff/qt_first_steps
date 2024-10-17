@@ -1,12 +1,14 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+
 #include <QMainWindow>
 #include <QMessageBox>
 #include <QLabel>
 #include <QGridLayout>
-#include "user_data.h"
 #include <QDebug>
+
+#include "user_data.h"
 #include "calc.h"
 
 class MainWindow : public QMainWindow

@@ -1,5 +1,6 @@
 #ifndef USER_DATA_H
 #define USER_DATA_H
+
 #include <iostream>
 #include <QCoreApplication>
 #include <QFile>
